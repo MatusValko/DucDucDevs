@@ -27,13 +27,13 @@ public class Sector : MonoBehaviour
     void Update()
     {
         var transformPosition = transform.position;
-        transformPosition.y = transformPosition.y - 0.1f;
+        transformPosition.y = transformPosition.y - 0.05f;
         transform.position = transformPosition;
     }
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("COLLIDER" + col );
+        //Debug.Log("COLLIDER" + col );
         if (col.gameObject.name == "Player")
         {
             player.Die();
