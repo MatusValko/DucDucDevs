@@ -26,9 +26,13 @@ public class Sector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var transformPosition = transform.position;
-        transformPosition.y = transformPosition.y - 0.05f;
-        transform.position = transformPosition;
+        if (!GameManager.PAUSED)
+        {
+            var transformPosition = transform.position;
+            transformPosition.y = transformPosition.y - GameManager.GAME_SPEED;
+            transform.position = transformPosition;
+        }
+        
     }
     
     private void OnTriggerEnter2D(Collider2D col)

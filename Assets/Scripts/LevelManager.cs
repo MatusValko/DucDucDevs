@@ -19,10 +19,10 @@ public class LevelManager : MonoBehaviour
     {
         //GenerateSector();
         Checkifunderplayer();
-        if (Input.GetButtonDown("Fire1"))
+        /*if (Input.GetButtonDown("Fire1"))
         {
             Unpause();
-        }
+        }*/
     }
 
     void PauseGame ()
