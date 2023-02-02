@@ -22,7 +22,7 @@ public class Lever : MonoBehaviour
             var transformPosition = Cage.transform.position;
             transformPosition.y = transformPosition.y + 0.05f;
             Cage.transform.position = transformPosition;
-            Debug.Log(Cage.transform.position.y);
+            //Debug.Log(Cage.transform.position.y);
             if (Cage.transform.position.y > 2)
             {
                 cageup = false;

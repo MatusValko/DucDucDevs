@@ -46,7 +46,7 @@ public class LevelManager : MonoBehaviour
             
             inGameSectors.RemoveAt(0);
             GenerateSector();
-            PauseGame();
+            //PauseGame();
         }
         
     }
