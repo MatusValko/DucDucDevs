@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject leverGoGameObject;
     //[SerializeField] private Camera camera;
     public static bool PAUSED = true;
-    [SerializeField] public static float GAME_SPEED = 0.05f;
+    [SerializeField] public static float GAME_SPEED = 0.03f;
     // Start is called before the first frame update
     private void Awake()
     {

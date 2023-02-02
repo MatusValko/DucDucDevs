@@ -7,6 +7,7 @@ public class Lever : MonoBehaviour
     [SerializeField] private GameObject Cage;
     [SerializeField] private Sprite secondState;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator animatorController;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,8 @@ public class Lever : MonoBehaviour
                 Debug.Log("START GAME");
                 GameManager.PAUSED = false;
                 Cage.SetActive(false);
+                animatorController.SetBool("move", true);
+                
             }
         }
         if (!cageup && !GameManager.PAUSED )

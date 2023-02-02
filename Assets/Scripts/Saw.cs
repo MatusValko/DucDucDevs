@@ -11,6 +11,8 @@ public class Saw : MonoBehaviour
     [SerializeField] private float speed = 5;
     bool right = true;
     bool left = false;
+    public bool ismoving = true;
+    [SerializeField] private GameObject lever;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,28 +21,38 @@ public class Saw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 vector3 = new Vector3(1,0,0);
-
-        if (right)
+        Vector3 vector3 = new Vector3(2,0,0);
+        if (ismoving)
         {
             
-            transform.position += (transform.right+vector3) * speed * Time.deltaTime;
-            //Debug.Log(transform.position.x);
-            if (transform.position.x > 5)
+            if (right)
             {
-                left = true;
-                right = false;
+            
+                transform.position += (transform.right+vector3) * speed * Time.deltaTime;
+                //Debug.Log(transform.position.x);
+                if (transform.position.x > 5)
+                {
+                    left = true;
+                    right = false;
+                }
             }
-        }
-        if (left)
-        {
-            transform.position += -(transform.right+vector3) * speed * Time.deltaTime;
-            if (transform.position.x < -5)
+            if (left)
             {
-                left = false;
-                right = true;
+                transform.position += -(transform.right+vector3) * speed * Time.deltaTime;
+                if (transform.position.x < -5)
+                {
+                    left = false;
+                    right = true;
+                }
             }
+            
+            
+            
+            
+            
+            
         }
+        
         
    
         

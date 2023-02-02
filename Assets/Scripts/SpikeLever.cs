@@ -62,6 +62,9 @@ public class SpikeLever : MonoBehaviour
 
         spike.GetComponent<SpriteRenderer>().sprite = spikeDown;
         spike.GetComponent<BoxCollider2D>().enabled = false;
+        var transformPosition = spike.gameObject.transform.position;
+        transformPosition.y -= 0.15f;
+        spike.gameObject.transform.position = transformPosition;
         gameObject.SetActive(false);
     }
     private void pushLever()
