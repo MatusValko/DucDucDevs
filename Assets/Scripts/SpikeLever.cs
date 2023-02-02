@@ -36,7 +36,7 @@ public class SpikeLever : MonoBehaviour
         _spriteRenderer.sprite = secondState;
         if (gameObject.name == "Lever (1)")
         {
-            Debug.Log("Lever (1)");
+            //Debug.Log("Lever (1)");
             firstLeverOpaque.SetActive(true);
             //var transformPosition = gameObject.transform.position;
             //transformPosition.x = 0.1412f;
@@ -44,7 +44,7 @@ public class SpikeLever : MonoBehaviour
         }
         else if (gameObject.name == "Lever (2)")
         {
-            Debug.Log("Lever (2)");
+            //Debug.Log("Lever (2)");
             secondLeverOpaque.SetActive(true);
             //var transformPosition = gameObject.transform.position;
             //transformPosition.x = -0.2377f;
@@ -52,7 +52,7 @@ public class SpikeLever : MonoBehaviour
         }
         else if (gameObject.name == "Lever (3)")
         {
-            Debug.Log("Lever (3)");
+            //Debug.Log("Lever (3)");
             thirdLeverOpaque.SetActive(true);
             
             //var transformPosition = gameObject.transform.position;

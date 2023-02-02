@@ -7,7 +7,7 @@ using UnityEngine;
 public class Sector : MonoBehaviour
 {
     
-    [SerializeField] private BoxCollider2D riverCollider;
+    [SerializeField] private BoxCollider2D damageCollider;
     [SerializeField] private BoxCollider2D playerCollider;
     [SerializeField] private Player player;
 
@@ -16,7 +16,7 @@ public class Sector : MonoBehaviour
     private void Awake()
     {
         player = FindObjectOfType<Player>();
-        playerCollider = player.GetComponent<BoxCollider2D>();
+        //playerCollider = player.GetComponent<BoxCollider2D>();
     }
     void Start()
     {
@@ -37,7 +37,7 @@ public class Sector : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        //Debug.Log("COLLIDER" + col );
+        Debug.Log("COLLIDER" + col );
         if (col.gameObject.name == "Player")
         {
             player.Die();
