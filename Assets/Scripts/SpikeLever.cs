@@ -17,6 +17,8 @@ public class SpikeLever : MonoBehaviour
     [SerializeField] private GameObject firstLeverOpaque;
     [SerializeField] private GameObject secondLeverOpaque;
     [SerializeField] private GameObject thirdLeverOpaque;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,10 +69,6 @@ public class SpikeLever : MonoBehaviour
         spike.gameObject.transform.position = transformPosition;
         gameObject.SetActive(false);
     }
-    private void pushLever()
-    {
-        
-    }
-    
-    
+
+
 }

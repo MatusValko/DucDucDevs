@@ -28,6 +28,5 @@ public class Torch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

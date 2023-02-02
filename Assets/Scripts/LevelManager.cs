@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -8,15 +9,21 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> allSectors;
     [SerializeField] private List<Sector> inGameSectors;
     [SerializeField] private Sector lastSector;
+    
+    [SerializeField] private TextMeshProUGUI Score;
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        Score.text = "SCORE: " + score;
         //GenerateSector();
         Checkifunderplayer();
         /*if (Input.GetButtonDown("Fire1"))
@@ -41,9 +48,9 @@ public class LevelManager : MonoBehaviour
     private void Checkifunderplayer()
     {
         lastSector = inGameSectors[0];
-        if (lastSector.transform.position.y < -20)
+        if (lastSector.transform.position.y < -10)
         {
-            
+            score += 1;
             inGameSectors.RemoveAt(0);
             GenerateSector();
             //PauseGame();
